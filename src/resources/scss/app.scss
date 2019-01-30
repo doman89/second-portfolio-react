@@ -1,0 +1,276 @@
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/variables";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-default;
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",*/
+  /*"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",*/
+  /*sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 6px;
+}
+
+#root{
+  max-width: 1600px;
+  margin: auto 0;
+  display: flex;
+
+
+  .app-header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 60px;
+    //overflow: hidden;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    color: #7433ff;
+    &__author-info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 3%;
+      //padding: auto 2%;
+      letter-spacing: 1px;
+      font-size: 1.6em;
+      /*text-shadow: ;*/
+      &--surname{
+        text-transform: uppercase;
+      }
+    }
+    &__nav {
+      flex-grow: 1;
+
+      .fa-bars {
+        cursor: pointer;
+        font-size: 3em;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%) rotate(0);
+        transition: 0.3s;
+
+        &:hover {
+          transform: translateY(-50%) rotate(180deg);
+        }
+
+        &--active {
+          display: none;
+        }
+      }
+
+      &__content {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 100%;
+        height: 100vh;
+        transition: 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--active {
+          background: $primaryColorAlpha;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+
+        &__list {
+          height: 100%;
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: stretch;
+          //flex-grow: 1;
+          &__item {
+            flex-basis: 17%;
+            //margin-left: 3%; no-margin in mobile-first
+            align-items: stretch;
+
+            &__btn {
+              width: 100%;
+              height: $base-height-button;
+              padding: 10px;
+              font-size: 1.4em;
+              font-weight: bold;
+              background-color: #fff;
+              //border: 2px solid $primaryColor;
+              border: 1px solid $primaryColor;
+              color: inherit;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              transition: 0.3s;
+              box-shadow: 0 20px 30px -10px $primaryColorAlpha, 0 10px 30px -5px $primaryColorAlpha;
+              cursor: pointer;
+              &:focus{
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px){
+  body{
+    font-size: 7px;
+  }
+  #root {
+    .app-header {
+      &__author-info{
+        margin-left: 1%;
+      }
+      &__nav {
+        .fa-bars {
+          display: none;
+        }
+
+        &__content {
+          position: static;
+          //width: 100%;
+          height: 100%;
+          //transition: 0.3s;
+          //display: flex;
+          //justify-content: center;
+          //align-items: center;
+          &--active {
+            background: transparent;
+            position: static;
+          }
+
+          &__list {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: nowrap;
+            &__item {
+              flex-basis: 17%;
+              //margin-left: 3%; no-margin in mobile-first
+              align-items: flex-end;
+
+              &__btn {
+                //width: 142px;
+                //cursor: pointer;
+                &:hover, &--active {
+                  color: #FFF;
+                  background-color: $primaryColor;
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  body{
+    font-size: 8px;
+  }
+  #root {
+    .app-header {
+      //height: 70px;
+      &__author-info{
+        margin-left: 2%;
+      }
+      &__nav {
+        &__content {
+          position: static;
+          height: 100%;
+
+          &__list {
+            width: 100%;
+            height: 80%;
+            flex-direction: row;
+            align-items: stretch;
+            &__item {
+              flex-basis: 17%;
+              //margin-left: 3%; no-margin in mobile-first
+              align-items: stretch;
+
+              &__btn {
+                width: 153px;
+                //cursor: pointer;
+                &:hover {
+                  color: #FFF;
+                  background-color: $primaryColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px){
+  body{
+    font-size: 10px;
+  }
+  #root {
+    .app-header {
+      //height: 80px;
+      &__author-info{
+        margin-left: 2%;
+      }
+      &__nav {
+        &__content {
+          position: static;
+          height: 100%;
+
+          &__list {
+            //height: 70%;
+            flex-direction: row;
+            align-items: stretch;
+            &__item {
+              flex-basis: 17%;
+              //margin-left: 3%; no-margin in mobile-first
+              align-items: stretch;
+
+              &__btn {
+                //width: 170px;
+                //cursor: pointer;
+                &:hover {
+                  color: #FFF;
+                  background-color: $primaryColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+section{
+  background-color: yellow;
+  grid-area: section;
+  height: 200vh;
+}
+
+.container>nav{
+  background-color: green;
+  grid-area: nav;
+}

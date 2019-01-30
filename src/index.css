@@ -1,14 +1,215 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",*/
+  /*"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",*/
+  /*sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 6px;
 }
+
+#root {
+  max-width: 1600px;
+  margin: auto 0;
+  display: flex;
+}
+#root .app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  color: #7433ff;
+}
+#root .app-header__author-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+  letter-spacing: 1px;
+  font-size: 1.6em;
+  /*text-shadow: ;*/
+}
+#root .app-header__author-info--surname {
+  text-transform: uppercase;
+}
+#root .app-header__nav {
+  flex-grow: 1;
+}
+#root .app-header__nav .fa-bars {
+  cursor: pointer;
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%) rotate(0);
+  transition: 0.3s;
+}
+#root .app-header__nav .fa-bars:hover {
+  transform: translateY(-50%) rotate(180deg);
+}
+#root .app-header__nav .fa-bars--active {
+  display: none;
+}
+#root .app-header__nav__content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  height: 100vh;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .app-header__nav__content--active {
+  background: rgba(116, 51, 255, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#root .app-header__nav__content__list {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+#root .app-header__nav__content__list__item {
+  flex-basis: 17%;
+  align-items: stretch;
+}
+#root .app-header__nav__content__list__item__btn {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 1.4em;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #7433ff;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  box-shadow: 0 20px 30px -10px rgba(116, 51, 255, 0.5), 0 10px 30px -5px rgba(116, 51, 255, 0.5);
+  cursor: pointer;
+}
+#root .app-header__nav__content__list__item__btn:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 7px;
+  }
+
+  #root .app-header__author-info {
+    margin-left: 1%;
+  }
+  #root .app-header__nav .fa-bars {
+    display: none;
+  }
+  #root .app-header__nav__content {
+    position: static;
+    height: 100%;
+  }
+  #root .app-header__nav__content--active {
+    background: transparent;
+    position: static;
+  }
+  #root .app-header__nav__content__list {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  #root .app-header__nav__content__list__item {
+    flex-basis: 17%;
+    align-items: flex-end;
+  }
+  #root .app-header__nav__content__list__item__btn:hover, #root .app-header__nav__content__list__item__btn--active {
+    color: #FFF;
+    background-color: #7433ff;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 8px;
+  }
+
+  #root .app-header__author-info {
+    margin-left: 2%;
+  }
+  #root .app-header__nav__content {
+    position: static;
+    height: 100%;
+  }
+  #root .app-header__nav__content__list {
+    width: 100%;
+    height: 80%;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #root .app-header__nav__content__list__item {
+    flex-basis: 17%;
+    align-items: stretch;
+  }
+  #root .app-header__nav__content__list__item__btn {
+    width: 153px;
+  }
+  #root .app-header__nav__content__list__item__btn:hover {
+    color: #FFF;
+    background-color: #7433ff;
+  }
+}
+@media (min-width: 1280px) {
+  body {
+    font-size: 10px;
+  }
+
+  #root .app-header__author-info {
+    margin-left: 2%;
+  }
+  #root .app-header__nav__content {
+    position: static;
+    height: 100%;
+  }
+  #root .app-header__nav__content__list {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #root .app-header__nav__content__list__item {
+    flex-basis: 17%;
+    align-items: stretch;
+  }
+  #root .app-header__nav__content__list__item__btn:hover {
+    color: #FFF;
+    background-color: #7433ff;
+  }
+}
+section {
+  background-color: yellow;
+  grid-area: section;
+  height: 200vh;
+}
+
+.container > nav {
+  background-color: green;
+  grid-area: nav;
+}
+
+/*# sourceMappingURL=index.css.map */
