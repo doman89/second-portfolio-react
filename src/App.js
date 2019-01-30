@@ -20,7 +20,7 @@ class App extends Component {
     // console.log(window.pageXOffset);
     console.log(window.scrollY);
     // if(window.querySelector('header').pageYOffset / 2
-  }
+  };
 
   render() {
     return (
