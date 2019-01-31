@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Header from './header/Header';
+import SubNavigation from './subnavigation/SubNavigation';
 
 class App extends Component {
 
   state={
     headerBottomOffset: 0,
-    activeSection: 'welcome!',
+    activeSection: 'Hi! I would like to welcome you in my new website about me!!',
   };
   headerOffset = null;
 
@@ -25,12 +26,13 @@ class App extends Component {
   render() {
     return (
         <>
-      <Header
-          handleChangeSection={this.handleChangeSection}
-          onScroll={this.handleOnScroll}
-      />
-          <nav>Here is the end of this site</nav>
-          <section>{this.state.activeSection}</section>
+          <Header
+            handleChangeSection={this.handleChangeSection}
+            onScroll={this.handleOnScroll}
+          />
+          <SubNavigation
+          />
+          <article>{this.state.activeSection}</article>
         </>
     );
   }

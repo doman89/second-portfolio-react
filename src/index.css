@@ -18,6 +18,7 @@ body {
   max-width: 1600px;
   margin: auto 0;
   display: flex;
+  color: #7433ff;
 }
 #root .app-header {
   position: fixed;
@@ -25,14 +26,14 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #FFF;
+  background-color: rgba(116, 51, 255, 0.04);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  color: #7433ff;
 }
 #root .app-header__author-info {
+  flex-basis: 12%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +102,7 @@ body {
   font-weight: bold;
   background-color: #fff;
   border: 1px solid #7433ff;
-  color: inherit;
+  color: #7433ff;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.3s;
@@ -109,6 +110,51 @@ body {
   cursor: pointer;
 }
 #root .app-header__nav__content__list__item__btn:focus {
+  outline: none;
+}
+#root .app-nav {
+  margin-top: 60px;
+  flex-basis: 12%;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: calc(100vh - 60px);
+  background-color: rgba(51, 88, 255, 0.04);
+}
+#root .app-nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#root .app-nav__list__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .app-nav__list__item__btn {
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 20px;
+  padding: 3px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #3358ff;
+  color: #3358ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  box-shadow: 0 20px 30px -10px rgba(51, 88, 255, 0.5), 0 10px 30px -5px rgba(51, 88, 255, 0.5);
+  cursor: pointer;
+}
+#root .app-nav__list__item__btn:focus {
   outline: none;
 }
 
@@ -201,10 +247,17 @@ body {
     background-color: #7433ff;
   }
 }
-section {
-  background-color: yellow;
-  grid-area: section;
-  height: 200vh;
+article {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  flex-grow: 1;
+  font-size: 1.2em;
+  background-color: rgba(51, 190, 255, 0.04);
+  color: #33beff;
 }
 
 .container > nav {
