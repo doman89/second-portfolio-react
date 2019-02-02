@@ -28,13 +28,14 @@ class App extends Component {
     return (
         <>
           <Header
-            handleChangeSection={this.handleChangeSection}
-            onScroll={this.handleOnScroll}
+              handleChangeSection={this.handleChangeSection}
+              onScroll={this.handleOnScroll}
           />
           <SubNavigation
+              activeSection={this.state.activeSection}
           />
           <Main
-            activeSection={this.state.activeSection}
+              activeSection={this.state.activeSection}
           />
         </>
     );
