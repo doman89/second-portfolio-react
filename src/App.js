@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Header from './header/Header';
 import SubNavigation from './subnavigation/SubNavigation';
+import Main from "./content/Main";
 
 class App extends Component {
 
   state={
     headerBottomOffset: 0,
-    activeSection: 'Hi! I would like to welcome you in my new website about me!!',
+    activeSection: 'welcome!',
   };
   headerOffset = null;
 
@@ -32,7 +33,9 @@ class App extends Component {
           />
           <SubNavigation
           />
-          <article>{this.state.activeSection}</article>
+          <Main
+            activeSection={this.state.activeSection}
+          />
         </>
     );
   }

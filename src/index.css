@@ -6,19 +6,19 @@
 
 body {
   font-family: "Roboto", Arial, sans-serif;
-  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",*/
-  /*"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",*/
-  /*sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 6px;
+  overflow: hidden;
+  background-color: rgba(112, 112, 112, 0.1);
 }
 
 #root {
   max-width: 1600px;
+  min-height: 100vh;
   margin: auto 0;
   display: flex;
-  color: #7433ff;
+  color: black;
 }
 #root .app-header {
   position: fixed;
@@ -26,7 +26,7 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: rgba(116, 51, 255, 0.04);
+  background-color: rgba(112, 112, 112, 0.1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -64,7 +64,8 @@ body {
   display: none;
 }
 #root .app-header__nav__content {
-  position: absolute;
+  position: relative;
+  z-index: 10;
   width: 100%;
   top: 0;
   left: 100%;
@@ -75,12 +76,13 @@ body {
   align-items: center;
 }
 #root .app-header__nav__content--active {
-  background: rgba(116, 51, 255, 0.5);
+  background: rgba(82, 82, 82, 0.7);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 10;
 }
 #root .app-header__nav__content__list {
   height: 100%;
@@ -100,25 +102,23 @@ body {
   padding: 10px;
   font-size: 1.4em;
   font-weight: bold;
-  background-color: #fff;
-  border: 1px solid #7433ff;
-  color: #7433ff;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.3s;
-  box-shadow: 0 20px 30px -10px rgba(116, 51, 255, 0.5), 0 10px 30px -5px rgba(116, 51, 255, 0.5);
+  box-shadow: 0 20px 30px -10px rgba(82, 82, 82, 0.7), 0 10px 30px -5px rgba(82, 82, 82, 0.7);
   cursor: pointer;
 }
 #root .app-header__nav__content__list__item__btn:focus {
   outline: none;
 }
 #root .app-nav {
-  margin-top: 60px;
+  padding-top: 60px;
   flex-basis: 12%;
   padding-left: 2%;
   padding-right: 2%;
-  height: calc(100vh - 60px);
-  background-color: rgba(51, 88, 255, 0.04);
 }
 #root .app-nav__list {
   list-style: none;
@@ -143,21 +143,227 @@ body {
   width: 90%;
   height: 20px;
   padding: 3px;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
   background-color: #fff;
-  border: 1px solid #3358ff;
-  color: #3358ff;
+  border: 1px solid black;
+  color: black;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.3s;
-  box-shadow: 0 20px 30px -10px rgba(51, 88, 255, 0.5), 0 10px 30px -5px rgba(51, 88, 255, 0.5);
+  box-shadow: 0 20px 30px -10px primaryColorAlpha, 0 10px 30px -5px rgba(82, 82, 82, 0.7);
   cursor: pointer;
 }
 #root .app-nav__list__item__btn:focus {
   outline: none;
 }
+#root .app-content {
+  flex-grow: 1;
+  display: flex;
+}
+#root .app-content__section-welcome {
+  height: 100%;
+  padding-top: 50%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#root .app-content__section-welcome__title {
+  margin-top: 20%;
+  text-align: center;
+  font-size: 2.4em;
+  text-transform: uppercase;
+}
+#root .app-content__section-welcome__title p {
+  margin-top: 2%;
+  text-transform: none;
+  font-size: 0.75em;
+}
+#root .app-content__section-welcome__photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .app-content__section-welcome__photo img {
+  width: 100%;
+  margin-top: 10%;
+}
 
+@media (orientation: landscape) {
+  #root {
+    max-width: 1600px;
+    margin: auto 0;
+    display: flex;
+    color: black;
+  }
+  #root .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(112, 112, 112, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #root .app-header__author-info {
+    flex-basis: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    letter-spacing: 1px;
+    font-size: 1.6em;
+    /*text-shadow: ;*/
+  }
+  #root .app-header__author-info--surname {
+    text-transform: uppercase;
+  }
+  #root .app-header__nav {
+    flex-grow: 1;
+  }
+  #root .app-header__nav .fa-bars {
+    cursor: pointer;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%) rotate(0);
+    transition: 0.3s;
+  }
+  #root .app-header__nav .fa-bars:hover {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  #root .app-header__nav .fa-bars--active {
+    display: none;
+  }
+  #root .app-header__nav__content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    height: 100vh;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .app-header__nav__content--active {
+    background: rgba(82, 82, 82, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  #root .app-header__nav__content__list {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  #root .app-header__nav__content__list__item {
+    flex-basis: 17%;
+    align-items: stretch;
+  }
+  #root .app-header__nav__content__list__item__btn {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 1px solid black;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    box-shadow: 0 20px 30px -10px rgba(82, 82, 82, 0.7), 0 10px 30px -5px rgba(82, 82, 82, 0.7);
+    cursor: pointer;
+  }
+  #root .app-header__nav__content__list__item__btn:focus {
+    outline: none;
+  }
+  #root .app-nav {
+    padding-top: 60px;
+    flex-basis: 12%;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 100vh;
+  }
+  #root .app-nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  #root .app-nav__list__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .app-nav__list__item__btn {
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 20px;
+    padding: 3px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    box-shadow: 0 20px 30px -10px rgba(82, 82, 82, 0.7), 0 10px 30px -5px rgba(82, 82, 82, 0.7);
+    cursor: pointer;
+  }
+  #root .app-nav__list__item__btn:focus {
+    outline: none;
+  }
+  #root .app-content {
+    flex-grow: 1;
+  }
+  #root .app-content__section-welcome {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+  #root .app-content__section-welcome__title {
+    margin-top: 2%;
+  }
+  #root .app-content__section-welcome__photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .app-content__section-welcome__photo img {
+    width: 60vh;
+    margin-top: 2%;
+  }
+}
 @media (min-width: 768px) {
   body {
     font-size: 7px;
@@ -189,7 +395,7 @@ body {
   }
   #root .app-header__nav__content__list__item__btn:hover, #root .app-header__nav__content__list__item__btn--active {
     color: #FFF;
-    background-color: #7433ff;
+    background-color: black;
   }
 }
 @media (min-width: 1024px) {
@@ -219,7 +425,7 @@ body {
   }
   #root .app-header__nav__content__list__item__btn:hover {
     color: #FFF;
-    background-color: #7433ff;
+    background-color: black;
   }
 }
 @media (min-width: 1280px) {
@@ -244,25 +450,13 @@ body {
   }
   #root .app-header__nav__content__list__item__btn:hover {
     color: #FFF;
-    background-color: #7433ff;
+    background-color: black;
   }
 }
-article {
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 60px;
-  padding-top: 2%;
-  padding-left: 2%;
-  padding-right: 2%;
-  flex-grow: 1;
-  font-size: 1.2em;
-  background-color: rgba(51, 190, 255, 0.04);
-  color: #33beff;
-}
-
-.container > nav {
-  background-color: green;
-  grid-area: nav;
+@media (orientation: landscape) {
+  body {
+    font-size: 8px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
