@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06ca277-d559-47ac-b134-b7ade53956d3" name="Default Changelist" comment="" />
+    <list default="true" id="a06ca277-d559-47ac-b134-b7ade53956d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/Welcome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/scss/app.scss" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="-488">
               <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -61,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/content/Welcome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="170">
+              <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -73,18 +79,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/resources/scss/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="914">
-              <caret line="188" selection-start-line="188" selection-end-line="189" selection-end-column="25" />
+            <state relative-caret-position="108">
+              <caret line="164" column="24" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
               <folding>
-                <element signature="e#989#1284#0" />
                 <element signature="e#1296#3250#0" />
                 <element signature="e#1540#1605#0" />
                 <element signature="e#1625#1661#0" />
                 <element signature="e#1688#3244#0" />
-                <element signature="e#3582#4675#0" />
                 <element signature="e#5957#11379#0" />
                 <element signature="e#11379#12485#0" />
                 <element signature="e#12513#13312#0" />
@@ -132,16 +136,16 @@
         <option value="$PROJECT_DIR$/src/subnavigation/SubNavigation.js" />
         <option value="$PROJECT_DIR$/src/resources/scss/settings/_colors.scss" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/content/Welcome.js" />
         <option value="$PROJECT_DIR$/src/content/Main.js" />
+        <option value="$PROJECT_DIR$/src/content/Welcome.js" />
         <option value="$PROJECT_DIR$/src/resources/scss/app.scss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="195" />
-    <option name="y" value="1" />
-    <option name="width" value="1179" />
+    <option name="x" value="519" />
+    <option name="y" value="41" />
+    <option name="width" value="840" />
     <option name="height" value="448" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -255,7 +259,7 @@
       <updated>1548092747408</updated>
       <workItem from="1548092750295" duration="324000" />
       <workItem from="1548342936268" duration="53871000" />
-      <workItem from="1549128247187" duration="4659000" />
+      <workItem from="1549128247187" duration="8144000" />
     </task>
     <task id="LOCAL-00001" summary="Built Navigation&#10;&#10;Is written the navigation of portfolio website. Added some styles and&#10;handle events methods. Navigation is responsive - has 4 break points.">
       <created>1548879409624</created>
@@ -289,7 +293,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71384000" />
+    <option name="totallyTimeSpent" value="74869000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -301,7 +305,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="195" y="1" width="1179" height="448" extended-state="0" />
+    <frame x="519" y="41" width="840" height="448" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
@@ -422,36 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/scss/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="914">
-          <caret line="188" selection-start-line="188" selection-end-line="189" selection-end-column="25" />
-          <folding>
-            <element signature="e#989#1284#0" />
-            <element signature="e#1296#3250#0" />
-            <element signature="e#1540#1605#0" />
-            <element signature="e#1625#1661#0" />
-            <element signature="e#1688#3244#0" />
-            <element signature="e#3582#4675#0" />
-            <element signature="e#5957#11379#0" />
-            <element signature="e#11379#12485#0" />
-            <element signature="e#12513#13312#0" />
-            <element signature="e#13340#14119#0" />
-            <element signature="e#14452#19745#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/content/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -464,7 +438,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="-488">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -482,12 +456,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/content/Welcome.js">
+    <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="221">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content/Welcome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/scss/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="164" column="24" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
+          <folding>
+            <element signature="e#1296#3250#0" />
+            <element signature="e#1540#1605#0" />
+            <element signature="e#1625#1661#0" />
+            <element signature="e#1688#3244#0" />
+            <element signature="e#5957#11379#0" />
+            <element signature="e#11379#12485#0" />
+            <element signature="e#12513#13312#0" />
+            <element signature="e#13340#14119#0" />
+            <element signature="e#14452#19745#0" />
           </folding>
         </state>
       </provider>

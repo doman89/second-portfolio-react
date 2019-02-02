@@ -8,7 +8,7 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 6px;
+  font-size: 8px;
   overflow: hidden;
   background-color: rgba(112, 112, 112, 0.1);
 }
@@ -24,7 +24,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 60px;
   background-color: rgba(112, 112, 112, 0.1);
   display: flex;
@@ -39,10 +39,10 @@ body {
   align-items: center;
   margin-left: 3%;
   letter-spacing: 1px;
-  font-size: 1.6em;
-  /*text-shadow: ;*/
+  font-size: 1.8em;
 }
 #root .app-header__author-info--surname {
+  margin-left: 3px;
   text-transform: uppercase;
 }
 #root .app-header__nav {
@@ -175,9 +175,13 @@ body {
   margin-top: 20%;
   text-align: center;
   font-size: 2.4em;
-  text-transform: uppercase;
 }
-#root .app-content__section-welcome__title p {
+#root .app-content__section-welcome__title__main {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#root .app-content__section-welcome__title__subtitle {
+  font-weight: lighter;
   margin-top: 2%;
   text-transform: none;
   font-size: 0.75em;
