@@ -1,22 +1,56 @@
 import React from 'react';
+import {fbase} from '../fbase';
 import myPhotography from '../resources/img/Mateusz_Domanski_small.png';
 
-const Welcome = () => {
-    return (
-        <main >
-            <article className={'app-content__section-welcome'}>
-                <h1 className={'app-content__section-welcome__title'}>
-                    <p className={'app-content__section-welcome__title__main'}>Hi! I am</p>
-                    <p className={'app-content__section-welcome__title__main'}>Mateusz Domanski</p>
-                    <p className={'app-content__section-welcome__title__subtitle'}>Are you looking for junior developer?</p>
-                    <p className={'app-content__section-welcome__title__subtitle'}> I would like to invite you, to see my portfolio.</p>
-                </h1>
-                <div className={'app-content__section-welcome__photo'}>
-                    <img src={myPhotography} alt={'My photography'}/>
-                </div>
-            </article>
-        </main>
-    );
+class Welcome extends React.Component {
+
+    state={
+      content: {
+        firstParagraph: "",
+        secondParagraph: "",
+        thirdParagraph: "",
+        fourthParagraph: "",
+        },
+    };
+
+    componentDidMount() {
+      this.reference = fbase.syncState(
+          `${this.props.language}/welcomeContent`,
+          {context: this, state: 'content'}
+      );
+    };
+
+    componentDidUpdate(prevProps) {
+        fbase.removeBinding(this.reference);
+        if(prevProps.language !== this.props.language) {
+            this.reference = fbase.syncState(
+                `${this.props.language}/welcomeContent`,
+                {context: this, state: 'content'}
+            );
+        }
+    }
+
+    componentWillUnmount() {
+        fbase.removeBinding(this.reference);
+    }
+
+    render(){
+        return (
+            <main>
+                <article className={'app-content__section-welcome'}>
+                    <h1 className={'app-content__section-welcome__title'}>
+                        <p className={'app-content__section-welcome__title__subtitle'}>{this.state.content.firstParagraph}</p>
+                        <p className={'app-content__section-welcome__title__main'}>{this.state.content.secondParagraph}</p>
+                        <p className={'app-content__section-welcome__title__subtitle'}>{this.state.content.thirdParagraph}</p>
+                        <p className={'app-content__section-welcome__title__subtitle'}> {this.state.content.fourthParagraph}</p>
+                    </h1>
+                    <div className={'app-content__section-welcome__photo'}>
+                        <img src={myPhotography} alt={'My photography'}/>
+                    </div>
+                </article>
+            </main>
+        );
+    }
 };
 
 export default Welcome;

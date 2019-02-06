@@ -1,16 +1,19 @@
-import React, {Component} from 'react';
-import SubNavigationButton from './SubNavigationButton';
+import React from 'react';
+import SubNavigationWelcome from "./SubNavigationWelcome";
 
 const SubNavigation = props =>{
-  return (
-    <nav className={'app-nav'}>
-        <ul className={'app-nav__list'}>
-            <li className={'app-nav__list__item'}>
-                {/*<SubNavigationButton textContent={'Doman'}/>*/}
-            </li>
-        </ul>
-    </nav>
-  );
+    const chooseMenu = () => {
+        if('welcome' === props.activeSection) return (<SubNavigationWelcome
+            handleChangeLanguage={props.handleChangeLanguage}/>)
+    };
+
+    return (
+        <nav className={'app-nav'}>
+            <ul className={'app-nav__list'}>
+                {chooseMenu()}
+            </ul>
+        </nav>
+    );
 };
 
 export default SubNavigation;

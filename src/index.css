@@ -1,4 +1,4 @@
-* {
+*, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,7 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 8px;
-  overflow: hidden;
   background-color: rgba(112, 112, 112, 0.2);
 }
 
@@ -18,7 +17,9 @@ body {
   min-height: 100vh;
   margin: auto 0;
   display: flex;
+  flex-direction: column;
   color: black;
+  overflow-x: hidden;
 }
 #root .app-header {
   position: fixed;
@@ -26,7 +27,7 @@ body {
   left: 0;
   right: 0;
   height: 60px;
-  background-color: rgba(112, 112, 112, 0.2);
+  background-color: #c8c8c8;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,6 +41,7 @@ body {
   margin-left: 3%;
   letter-spacing: 1px;
   font-size: 1.8em;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 #root .app-header__author-info--surname {
   margin-left: 3px;
@@ -64,8 +66,7 @@ body {
   display: none;
 }
 #root .app-header__nav__content {
-  position: relative;
-  z-index: 10;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 100%;
@@ -74,15 +75,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(0);
+  background: rgba(82, 82, 82, 0.7);
 }
 #root .app-header__nav__content--active {
-  background: rgba(82, 82, 82, 0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
+  transform: translateX(-100%);
 }
 #root .app-header__nav__content__list {
   height: 100%;
@@ -116,21 +113,20 @@ body {
 }
 #root .app-nav {
   padding-top: 60px;
-  flex-basis: 12%;
+  flex-basis: 15%;
   padding-left: 2%;
   padding-right: 2%;
 }
 #root .app-nav__list {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
   height: 100%;
 }
 #root .app-nav__list__item {
-  width: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,10 +136,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
   height: 20px;
   padding: 3px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
   background-color: #fff;
   border: 1px solid black;
@@ -158,12 +153,10 @@ body {
   outline: none;
 }
 #root .app-content {
-  flex-grow: 1;
   display: flex;
 }
 #root .app-content__section-welcome {
   height: 100%;
-  padding-top: 50%;
   padding-left: 2%;
   padding-right: 2%;
   display: flex;
@@ -195,63 +188,78 @@ body {
   width: 100%;
   margin-top: 10%;
 }
-
-@media (orientation: landscape) {
-  #root .app-content__section-welcome {
-    padding-top: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #root .app-content__section-welcome__title {
-    margin-top: 2%;
-  }
-  #root .app-content__section-welcome__photo {
-    height: 100%;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  #root .app-content__section-welcome__photo img {
-    width: 70vh;
-  }
+#root .admin-panel {
+  display: flex;
+  margin-top: 100px;
+  flex-grow: 1;
 }
+#root .admin-panel form {
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  flex-grow: 1;
+}
+#root .admin-panel form button {
+  font-size: inherit;
+}
+
 @media (min-width: 768px) {
   body {
-    font-size: 9px;
+    font-size: 10px;
   }
 
-  #root .app-header__author-info {
-    margin-left: 1%;
-  }
   #root .app-header__nav .fa-bars {
     display: none;
   }
   #root .app-header__nav__content {
     position: static;
     height: 100%;
+    background: transparent;
   }
   #root .app-header__nav__content--active {
-    background: transparent;
-    position: static;
+    transform: none;
   }
   #root .app-header__nav__content__list {
     width: 100%;
+    height: 100%;
     flex-direction: row;
     align-items: center;
-    flex-wrap: nowrap;
+    justify-content: space-around;
   }
-  #root .app-header__nav__content__list__item {
-    flex-basis: 17%;
-    align-items: flex-end;
+  #root .app-header__nav__content__list__item__btn {
+    position: relative;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    overflow: hidden;
+    opacity: 1;
+  }
+  #root .app-header__nav__content__list__item__btn::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    opacity: 0;
+    background-color: #000;
   }
   #root .app-header__nav__content__list__item__btn:hover, #root .app-header__nav__content__list__item__btn--active {
-    color: #FFF;
-    background-color: black;
+    opacity: 1;
+  }
+  #root .app-header__nav__content__list__item__btn:hover::after, #root .app-header__nav__content__list__item__btn--active::after {
+    opacity: 1;
   }
 }
 @media (min-width: 1024px) {
   body {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   #root .app-header__author-info {
@@ -267,21 +275,10 @@ body {
     flex-direction: row;
     align-items: stretch;
   }
-  #root .app-header__nav__content__list__item {
-    flex-basis: 17%;
-    align-items: stretch;
-  }
-  #root .app-header__nav__content__list__item__btn {
-    width: 153px;
-  }
-  #root .app-header__nav__content__list__item__btn:hover {
-    color: #FFF;
-    background-color: black;
-  }
 }
 @media (min-width: 1280px) {
   body {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   #root .app-header__author-info {
@@ -299,9 +296,40 @@ body {
     flex-basis: 17%;
     align-items: stretch;
   }
-  #root .app-header__nav__content__list__item__btn:hover {
-    color: #FFF;
-    background-color: black;
+}
+@media (orientation: landscape) {
+  #root {
+    flex-direction: row;
+  }
+  #root .app-header__nav__content {
+    flex-direction: row;
+  }
+  #root .app-nav__list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  #root .app-nav__list__item__btn {
+    flex-grow: 1;
+  }
+  #root .app-content__section-welcome {
+    padding-top: 30vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #root .app-content__section-welcome__title {
+    flex-basis: 60%;
+    margin-top: 6%;
+  }
+  #root .app-content__section-welcome__photo {
+    flex-basis: 40%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  #root .app-content__section-welcome__photo img {
+    width: 33vw;
   }
 }
 

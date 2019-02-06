@@ -1,13 +1,15 @@
 import React from 'react';
 import Welcome from './Welcome';
+import PageNotFound from '../PageNotFound';
 
 const Main = props => {
 
     const chooseSection = () =>{
       switch (props.activeSection) {
-          case 'welcome!':
-              return <Welcome />
-
+          case 'welcome':
+              return <Welcome language={props.language}/>
+          default:
+              return <PageNotFound/>
       }
     };
 
