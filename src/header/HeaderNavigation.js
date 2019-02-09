@@ -2,70 +2,108 @@ import React from 'react';
 import HeaderNavigationLiElement from './HeaderNavigationLiElement';
 
 class HeaderNavigation extends React.Component {
-    componentDidMount() {
-        document.querySelector('.app-header__nav__content__list__item__btn')
-            .classList.toggle('app-header__nav__content__list__item__btn--active');
+    constructor(props){
+        super(props);
+        this.state = {
+            mobileMenuActive: false,
+        };
+        this.widthForDesktop = false;
     }
+
+    isWidthForDesktop = () =>{
+        if(window.innerWidth < 768 && this.widthForDesktop){
+            this.widthForDesktop = false;
+        }else if(window.innerWidth >= 768 && !this.widthForDesktop){
+            this.widthForDesktop = true;
+            this.setState({
+               mobileMenuActive: false,
+            });
+        }
+    };
 
     toggleMenuHamburger = event => {
         event.stopPropagation();
-        if(event.target.classList.contains('fa-bars')) {
-            event.target.classList.toggle('fa-bars--active');
-            event.target.nextSibling.classList.toggle('app-header__nav__content--active');
-        }else if(event.target.classList.contains('app-header__nav__content__list__item__btn')) {
-            event.target.parentNode.parentNode.childNodes.forEach(
-                child => child.firstChild.classList.remove('app-header__nav__content__list__item__btn--active')
-            );
-            event.target.classList.add('app-header__nav__content__list__item__btn--active');
-            event.target.parentElement.parentElement.parentElement.classList.toggle('app-header__nav__content--active');
-            event.target.parentElement.parentElement.parentElement.previousElementSibling.classList.toggle('fa-bars--active');
+        if(!this.widthForDesktop){
+            this.setState(prevState =>({
+                mobileMenuActive: !prevState.mobileMenuActive,
+            }));
+        }else{
+            this.setState({
+                mobileMenuActive: false,
+            })
+        }
+        if(event.target.dataset.id) {
             this.props.handleChangeSection(event);
         }
     };
 
-    handleBackgroundClick = event => {
-        if(event.target.classList.contains("app-header__nav__content__list"))
-            event.target = event.target.parentNode;
-        event.target.classList.toggle('app-header__nav__content--active');
-        if(event.target.previousSibling)
-            event.target.previousSibling.classList.toggle('fa-bars--active');
+    choosingClassName = (nameOfClass, negationResult = false) => {
+        return this.state.mobileMenuActive !== negationResult ?
+            `${nameOfClass} ${nameOfClass}--active` :
+            nameOfClass;
     };
+
     render(){
     return (
         <nav className={'app-header__nav'}>
-            <i onClick={this.toggleMenuHamburger} className={'fas fa-bars'}></i>
-            <div className={'app-header__nav__content'} onClick={this.handleBackgroundClick}>
-                <ul className={'app-header__nav__content__list'}>
+            <i
+                onClick={this.toggleMenuHamburger}
+                className={this.choosingClassName('fas fa-bars')}>
+            </i>
+            <div
+                className={this.choosingClassName('app-header__nav__content')}
+                onClick={this.toggleMenuHamburger}
+            >
+                <ul
+                    className={'app-header__nav__content__list'}
+                    onClick={this.toggleMenuHamburger}
+                >
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
-                        content={'welcome!'}
+                        activeSection={this.props.activeSection}
                         elementDataSet={'welcome'}
+                        language={this.props.language}
                     />
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
-                        content={'about me'}
+                        activeSection={this.props.activeSection}
                         elementDataSet={'aboutMe'}
+                        language={this.props.language}
                     />
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
-                        content={'my skills'}
+                        activeSection={this.props.activeSection}
                         elementDataSet={'mySkills'}
+                        language={this.props.language}
                     />
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
-                        content={'my portfolio'}
+                        activeSection={this.props.activeSection}
                         elementDataSet={'myPortfolio'}
+                        language={this.props.language}
                     />
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
-                        content={'contact'}
+                        activeSection={this.props.activeSection}
                         elementDataSet={'contact'}
+                        language={this.props.language}
                     />
                 </ul>
             </div>
         </nav>
-    );
+        );
     }
-};
+
+    componentDidMount() {
+        window.innerWidth < 768 ?
+            this.widthForDesktop = false :
+            this.widthForDesktop = true;
+        window.addEventListener('resize', this.isWidthForDesktop);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.isWidthForDesktop);
+    };
+}
 
 export default HeaderNavigation;

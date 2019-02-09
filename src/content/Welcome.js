@@ -13,27 +13,6 @@ class Welcome extends React.Component {
         },
     };
 
-    componentDidMount() {
-      this.reference = fbase.syncState(
-          `${this.props.language}/welcomeContent`,
-          {context: this, state: 'content'}
-      );
-    };
-
-    componentDidUpdate(prevProps) {
-        fbase.removeBinding(this.reference);
-        if(prevProps.language !== this.props.language) {
-            this.reference = fbase.syncState(
-                `${this.props.language}/welcomeContent`,
-                {context: this, state: 'content'}
-            );
-        }
-    }
-
-    componentWillUnmount() {
-        fbase.removeBinding(this.reference);
-    }
-
     render(){
         return (
             <main>
@@ -51,6 +30,27 @@ class Welcome extends React.Component {
             </main>
         );
     }
-};
+
+    componentDidMount() {
+        this.reference = fbase.syncState(
+            `${this.props.language}/welcomeContent`,
+            {context: this, state: 'content'}
+        );
+    };
+
+    componentDidUpdate(prevProps) {
+        fbase.removeBinding(this.reference);
+        if(prevProps.language !== this.props.language) {
+            this.reference = fbase.syncState(
+                `${this.props.language}/welcomeContent`,
+                {context: this, state: 'content'}
+            );
+        }
+    };
+
+    componentWillUnmount() {
+        fbase.removeBinding(this.reference);
+    };
+}
 
 export default Welcome;

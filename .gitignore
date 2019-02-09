@@ -11,6 +11,9 @@
 # production
 /build
 
+/src/fbase.js
+/src/fbase-2.js
+
 # misc
 .DS_Store
 .env.local

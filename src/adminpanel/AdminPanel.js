@@ -15,10 +15,14 @@ class AdminPanel extends React.Component {
         });
     };
 
+    handleOnSubmit = event => {
+        event.preventDefault();
+    };
+
     sectionToEdit = () => {
       switch (this.state.section) {
           case 'welcome!':
-              return <AdminWelcome/>;
+              return <AdminWelcome handleOnSubmit={this.handleOnSubmit}/>;
           default:
               return <p>Some things goes wrong!</p>;
       }
@@ -34,6 +38,6 @@ class AdminPanel extends React.Component {
             </>
         );
     };
-};
+}
 
 export default AdminPanel;

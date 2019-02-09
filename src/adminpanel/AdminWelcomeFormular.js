@@ -40,10 +40,6 @@ class AdminWelcomeFormular extends React.Component{
         }
     };
 
-    handleOnSubmit = event => {
-        event.preventDefault();
-    };
-
     handleConfirm = () => {
       this.setState( prevState => (
           {confirmed: !prevState.confirmed}
@@ -72,7 +68,7 @@ class AdminWelcomeFormular extends React.Component{
     render(){
         const {firstLine, secondLine, thirdLine, fourthLine} = this.state;
       return (
-        <form onSubmit={this.handleOnSubmit}>
+        <form onSubmit={this.props.handleOnSubmit}>
             <p>{`Edition field for ${this.props.language} version`}</p>
             <br />
             <label htmlFor={'firstLine'}>First line of text</label>
@@ -108,6 +104,6 @@ class AdminWelcomeFormular extends React.Component{
         </form>
       );
     };
-};
+}
 
 export default AdminWelcomeFormular;

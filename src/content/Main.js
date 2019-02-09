@@ -7,7 +7,7 @@ const Main = props => {
     const chooseSection = () =>{
       switch (props.activeSection) {
           case 'welcome':
-              return <Welcome language={props.language}/>
+              return <Welcome language={props.language}/>;
           default:
               return <PageNotFound/>
       }

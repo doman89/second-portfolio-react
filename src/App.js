@@ -9,42 +9,34 @@ class App extends Component {
       headerBottomOffset: 0,
       activeSection: 'welcome',
       activeSubSection: '',
-      language: 'en'
+      language: 'en',
   };
 
-    handleChangeLanguage = event => {
-        this.setState({
-                language: event.target.dataset.id,
-            })
-    };
-  headerOffset = null;
+
+  handleChangeLanguage = event => {
+      this.setState({
+          language: event.target.dataset.id,
+      })
+  };
 
   handleChangeSection = event => {
-    this.setState({
-      activeSection: event.target.dataset.id,
-    });
+      this.setState({
+          activeSection: event.target.dataset.id,
+      });
   };
-    handleChangeSubSection = event => {
-        this.setState({
-            activeSubSection: event.target.dataset.id,
-        });
-    };
 
-  // handleScroll = event => {
-  //   console.log(this.headerQuery);
-  //   this.headerQuery.style.backgroundColor = 'rgba(200, 200, 200, 1)';
-  //   console.log(window.scrollY);
-  //   // if(window.querySelector('header').pageYOffset / 2
-  // };
+  handleChangeSubSection = event => {
+      this.setState({
+          activeSubSection: event.target.dataset.id,
+      });
+  };
 
   render() {
     return (
         <>
           <Header
               activeSection={this.state.activeSection}
-              activeSubSection={this.state.activeSubSection}
               handleChangeSection={this.handleChangeSection}
-              onScroll={this.handleOnScroll}
               language={this.state.language}
           />
           <SubNavigation
@@ -61,16 +53,7 @@ class App extends Component {
           />
         </>
     );
-  }
-
-  // componentDidMount() {
-  //         window.addEventListener('scroll', this.handleScroll);
-  //         this.headerQuery = document.querySelector('header');
-  // }
-  // componentWillUnmount() {
-  //         window.removeEventListener('scroll', this.handleScroll);
-  // }
-
+  };
 }
 
 export default App;

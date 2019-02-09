@@ -3,8 +3,12 @@ import SubNavigationWelcome from "./SubNavigationWelcome";
 
 const SubNavigation = props =>{
     const chooseMenu = () => {
-        if('welcome' === props.activeSection) return (<SubNavigationWelcome
-            handleChangeLanguage={props.handleChangeLanguage}/>)
+        if('welcome' === props.activeSection)
+            return (
+                <SubNavigationWelcome
+                    language={props.language}
+                    handleChangeLanguage={props.handleChangeLanguage}
+                />)
     };
 
     return (
