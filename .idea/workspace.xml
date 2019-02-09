@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06ca277-d559-47ac-b134-b7ade53956d3" name="Default Changelist" comment="Navigation logic is done and all knowed bugs are fixed.&#10;Completely changed a toggleMenuHamburger method in HeaderNavigation &#10;component.&#10;Changed HeaderNavigationLiElement from stateless functional component &#10;to class component &#10;&#10;Added AboutMe component but now is empty.">
-      <change afterPath="$PROJECT_DIR$/src/adminpanel/AdminNavigationContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/AboutMe.js" afterDir="false" />
+    <list default="true" id="a06ca277-d559-47ac-b134-b7ade53956d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adminpanel/AdminPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/adminpanel/AdminPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adminpanel/AdminWelcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/adminpanel/AdminWelcome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adminpanel/AdminWelcomeFormular.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/adminpanel/AdminWelcomeFormular.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/Welcome.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fbase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fbase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/HeaderNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/HeaderNavigationLiElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/HeaderNavigationLiElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subnavigation/SubNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/subnavigation/SubNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subnavigation/SubNavigationWelcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/subnavigation/SubNavigationWelcome.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -82,8 +65,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/adminpanel/AdminNavigationContent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            <state relative-caret-position="170">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -100,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/adminpanel/AdminPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -112,32 +104,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/adminpanel/AdminWelcomeFormular.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fbase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js">
+        <entry file="file://$PROJECT_DIR$/src/adminpanel/AdminWelcomeFormular.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+            <state relative-caret-position="181">
+              <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -200,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/header/HeaderNavigation.js" />
         <option value="$PROJECT_DIR$/src/adminpanel/AdminWelcomeFormular.js" />
         <option value="$PROJECT_DIR$/src/adminpanel/AdminPanel.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -295,7 +279,7 @@
       <workItem from="1548092750295" duration="324000" />
       <workItem from="1548342936268" duration="53871000" />
       <workItem from="1549128247187" duration="69110000" />
-      <workItem from="1549453366801" duration="41874000" />
+      <workItem from="1549453366801" duration="42841000" />
     </task>
     <task id="LOCAL-00001" summary="Built Navigation&#10;&#10;Is written the navigation of portfolio website. Added some styles and&#10;handle events methods. Navigation is responsive - has 4 break points.">
       <created>1548879409624</created>
@@ -332,11 +316,25 @@
       <option name="project" value="LOCAL" />
       <updated>1549471494902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Navigation logic is done and all knowed bugs are fixed.&#10;Completely changed a toggleMenuHamburger method in HeaderNavigation &#10;component.&#10;Changed HeaderNavigationLiElement from stateless functional component &#10;to class component &#10;&#10;Added AboutMe component but now is empty.">
+      <created>1549718392801</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1549718392801</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Deleted data from firebase">
+      <created>1549718945973</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1549718945973</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177709000" />
+    <option name="totallyTimeSpent" value="178676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -354,7 +352,7 @@
       <window_info id="npm" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.3478261" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.3478261" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -364,9 +362,9 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32698414" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.19326241" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.19326241" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3280142" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3280142" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
@@ -403,7 +401,8 @@
     <MESSAGE value="The first test of Welcome component.&#10;&#10;Added Main component for choosing a section.&#10;Changed styles for another color for fonts and backgrounds." />
     <MESSAGE value="Fixed many bug of menu working.&#10;&#10;Added connect with firebase (all text content is downloading form&#10;database).&#10;Added React-Router for wrong adresses and admin panel (for editing&#10;website content).&#10;&#10;Added first components for admin panels.&#10;&#10;Changed css styles - better optimisation for rendering, now used only&#10;transform and opacity for transition." />
     <MESSAGE value="Navigation logic is done and all knowed bugs are fixed.&#10;Completely changed a toggleMenuHamburger method in HeaderNavigation &#10;component.&#10;Changed HeaderNavigationLiElement from stateless functional component &#10;to class component &#10;&#10;Added AboutMe component but now is empty." />
-    <option name="LAST_COMMIT_MESSAGE" value="Navigation logic is done and all knowed bugs are fixed.&#10;Completely changed a toggleMenuHamburger method in HeaderNavigation &#10;component.&#10;Changed HeaderNavigationLiElement from stateless functional component &#10;to class component &#10;&#10;Added AboutMe component but now is empty." />
+    <MESSAGE value="Deleted data from firebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted data from firebase" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
@@ -486,16 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="26" lean-forward="true" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fbase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/adminpanel/AdminNavigationContent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -647,6 +629,30 @@
           <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/adminpanel/AdminNavigationContent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fbase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
