@@ -6,7 +6,9 @@
 .pnp.js
 
 
-
+# fbase data
+/src
+fbase.js
 
 # testing
 /coverage

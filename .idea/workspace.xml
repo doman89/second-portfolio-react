@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a06ca277-d559-47ac-b134-b7ade53956d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fbase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fbase.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -71,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="109">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -104,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fbase.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -279,7 +277,7 @@
       <workItem from="1548092750295" duration="324000" />
       <workItem from="1548342936268" duration="53871000" />
       <workItem from="1549128247187" duration="69110000" />
-      <workItem from="1549453366801" duration="42841000" />
+      <workItem from="1549453366801" duration="43058000" />
     </task>
     <task id="LOCAL-00001" summary="Built Navigation&#10;&#10;Is written the navigation of portfolio website. Added some styles and&#10;handle events methods. Navigation is responsive - has 4 break points.">
       <created>1548879409624</created>
@@ -330,11 +328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549718945973</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit for Heroku">
+      <created>1549719347321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1549719347321</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178676000" />
+    <option name="totallyTimeSpent" value="178893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -402,7 +407,8 @@
     <MESSAGE value="Fixed many bug of menu working.&#10;&#10;Added connect with firebase (all text content is downloading form&#10;database).&#10;Added React-Router for wrong adresses and admin panel (for editing&#10;website content).&#10;&#10;Added first components for admin panels.&#10;&#10;Changed css styles - better optimisation for rendering, now used only&#10;transform and opacity for transition." />
     <MESSAGE value="Navigation logic is done and all knowed bugs are fixed.&#10;Completely changed a toggleMenuHamburger method in HeaderNavigation &#10;component.&#10;Changed HeaderNavigationLiElement from stateless functional component &#10;to class component &#10;&#10;Added AboutMe component but now is empty." />
     <MESSAGE value="Deleted data from firebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted data from firebase" />
+    <MESSAGE value="Commit for Heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit for Heroku" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
@@ -640,13 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fbase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -654,6 +653,13 @@
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
