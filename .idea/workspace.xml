@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06ca277-d559-47ac-b134-b7ade53956d3" name="Default Changelist" comment="Added new rules to gitignore for hidden firebase data">
+    <list default="true" id="a06ca277-d559-47ac-b134-b7ade53956d3" name="Default Changelist" comment="Written content of AboutMe component.&#10;Added AboutMe component to Main component for showing information about&#10;me.&#10;Changed Welcome component from class to stateful functional.&#10;Changed sending properties from App component (now it has all data from&#10;firebase in state) to children.&#10;Merge methods for changing subsection and changing language in one, for&#10;better universality SubNavigation component and his children.&#10;Changed in styles for buttons after pseudoelements, now they are visible&#10;from lowest resolution - transition still for desktop.">
+      <change afterPath="$PROJECT_DIR$/src/content/AboutMeDescription.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/AboutMe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/Welcome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/HeaderNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/HeaderNavigationLiElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/HeaderNavigationLiElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subnavigation/SubNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/subnavigation/SubNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subnavigation/SubNavigationWelcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/subnavigation/SubNavigationWelcome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fbase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fbase.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,38 +20,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="88" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="88" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Router.js">
+        <entry file="file://$PROJECT_DIR$/src/header/Header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" lean-forward="true" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PageNotFound.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -71,55 +39,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.css">
+        <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="11" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/adminpanel/AdminNavigationContent.js">
+        <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/scss/app.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2138">
-              <caret line="107" column="40" lean-forward="true" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-column="7" selection-end-line="2" />
               <folding>
-                <element signature="e#3581#4444#0" />
-                <element signature="e#3708#4356#0" />
-                <element signature="e#5139#5587#0" />
-                <element signature="e#5619#5728#0" />
-                <element signature="e#5669#5714#0" />
-                <element signature="e#4306#4346#0" />
-                <element signature="e#4476#5199#0" />
-                <element signature="e#5589#5854#0" />
-                <element signature="e#5892#5918#0" />
-                <element signature="e#7551#7999#0" />
-                <element signature="e#8031#8140#0" />
-                <element signature="e#8081#8126#0" />
-                <element signature="e#8211#9055#0" />
-                <element signature="e#9083#9867#0" />
-                <element signature="e#9951#10382#0" />
-                <element signature="e#10710#11274#0" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/adminpanel/AdminPanel.js">
+        <entry file="file://$PROJECT_DIR$/src/content/AboutMe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+            <state relative-caret-position="153">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -128,10 +72,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/content/AboutMe.js">
+        <entry file="file://$PROJECT_DIR$/src/content/AboutMeDescription.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="194">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigationLiElement.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -140,12 +111,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fbase.js">
+        <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,17 +177,17 @@
         <option value="$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js" />
         <option value="$PROJECT_DIR$/src/subnavigation/SubNavigationWelcome.js" />
         <option value="$PROJECT_DIR$/src/subnavigation/SubNavigationList.js" />
-        <option value="$PROJECT_DIR$/src/subnavigation/SubNavigation.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/content/AboutMeDescription.js" />
         <option value="$PROJECT_DIR$/src/resources/scss/app.scss" />
         <option value="$PROJECT_DIR$/src/content/AboutMe.js" />
+        <option value="$PROJECT_DIR$/src/subnavigation/SubNavigation.js" />
+        <option value="$PROJECT_DIR$/src/content/AboutMeDescription.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="713" />
-    <option name="y" value="17" />
+    <option name="x" value="54" />
+    <option name="y" value="27" />
     <option name="width" value="600" />
     <option name="height" value="697" />
   </component>
@@ -243,38 +214,13 @@
               <item name="new-portfolio-react" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-portfolio-react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="adminpanel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-portfolio-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-portfolio-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new-portfolio-react" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-portfolio-react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-portfolio-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-portfolio-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-portfolio-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-portfolio-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-portfolio-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-portfolio-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="subnavigation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,7 +271,7 @@
       <workItem from="1548092750295" duration="324000" />
       <workItem from="1548342936268" duration="53871000" />
       <workItem from="1549128247187" duration="69110000" />
-      <workItem from="1549453366801" duration="79769000" />
+      <workItem from="1549453366801" duration="82661000" />
     </task>
     <task id="LOCAL-00001" summary="Built Navigation&#10;&#10;Is written the navigation of portfolio website. Added some styles and&#10;handle events methods. Navigation is responsive - has 4 break points.">
       <created>1548879409624</created>
@@ -397,11 +343,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549719637550</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Written content of AboutMe component.&#10;Added AboutMe component to Main component for showing information about&#10;me.&#10;Changed Welcome component from class to stateful functional.&#10;Changed sending properties from App component (now it has all data from&#10;firebase in state) to children.&#10;Merge methods for changing subsection and changing language in one, for&#10;better universality SubNavigation component and his children.&#10;Changed in styles for buttons after pseudoelements, now they are visible&#10;from lowest resolution - transition still for desktop.">
+      <created>1549832402220</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1549832402220</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215604000" />
+    <option name="totallyTimeSpent" value="218496000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,10 +369,10 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="npm" order="0" side_tool="true" />
+      <window_info id="npm" order="0" sideWeight="0.50242716" side_tool="true" weight="0.1436012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.34449404" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.4975728" visible="true" weight="0.1436012" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -428,8 +381,8 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3289689" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32698414" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49925596" weight="0.14729951" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32569557" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49925596" visible="true" weight="0.46481177" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50074404" side_tool="true" weight="0.14716312" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3280142" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -450,7 +403,8 @@
     <MESSAGE value="Deleted data from firebase" />
     <MESSAGE value="Commit for Heroku" />
     <MESSAGE value="Added new rules to gitignore for hidden firebase data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new rules to gitignore for hidden firebase data" />
+    <MESSAGE value="Written content of AboutMe component.&#10;Added AboutMe component to Main component for showing information about&#10;me.&#10;Changed Welcome component from class to stateful functional.&#10;Changed sending properties from App component (now it has all data from&#10;firebase in state) to children.&#10;Merge methods for changing subsection and changing language in one, for&#10;better universality SubNavigation component and his children.&#10;Changed in styles for buttons after pseudoelements, now they are visible&#10;from lowest resolution - transition still for desktop." />
+    <option name="LAST_COMMIT_MESSAGE" value="Written content of AboutMe component.&#10;Added AboutMe component to Main component for showing information about&#10;me.&#10;Changed Welcome component from class to stateful functional.&#10;Changed sending properties from App component (now it has all data from&#10;firebase in state) to children.&#10;Merge methods for changing subsection and changing language in one, for&#10;better universality SubNavigation component and his children.&#10;Changed in styles for buttons after pseudoelements, now they are visible&#10;from lowest resolution - transition still for desktop." />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
@@ -539,124 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigationLiElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/content/Welcome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationAboutMe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationWelcome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-column="26" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/content/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/content/AboutMeDescription.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="88" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="88" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -740,13 +576,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/content/AboutMe.js">
+    <entry file="file://$PROJECT_DIR$/src/content/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="187">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content/Welcome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-column="7" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/header/HeaderNavigationLiElement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationAboutMe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationWelcome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subnavigation/SubNavigationList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content/AboutMe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content/AboutMeDescription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
         </state>
       </provider>
     </entry>
