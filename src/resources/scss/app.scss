@@ -36,6 +36,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    z-index: 2;
 
     &__author-info{
       flex-basis: 12%;
@@ -85,7 +86,6 @@ body {
 
       &__content {
         position: absolute;
-        //z-index: 10;
         width: 100%;
         top: 0;
         left: 100%;
@@ -107,11 +107,11 @@ body {
           flex-direction: column;
           justify-content: space-around;
           align-items: stretch;
-          //flex-grow: 1;
           &__item {
             flex-basis: 17%;
             align-items: stretch;
             &__btn {
+              position: relative;
               width: 100%;
               height: $base-height-button;
               padding: 10px;
@@ -125,6 +125,27 @@ body {
               transition: 0.3s;
               box-shadow: 0 20px 30px -10px $primaryColorAlpha, 0 10px 30px -5px $primaryColorAlpha;
               cursor: pointer;
+              &::after{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                color: white;
+                content: attr(data-content);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background-color: #000;
+              }
+              &:hover, &--active {
+                opacity: 1;
+                &::after{
+                  opacity: 1;
+                }
+              }
               &:focus{
                 outline: none;
               }
@@ -139,19 +160,23 @@ body {
     flex-basis: 15%;
     padding-left: 2%;
     padding-right: 2%;
+    display: flex;
     &__list{
       list-style: none;
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      flex-grow: 1;
+      flex-wrap: wrap;
       height: 100%;
       &__item{
+        flex-basis: 45%;
         margin-left: 10px;
         margin-top: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         &__btn{
+          overflow: hidden;
+          flex-grow: 1;
           box-sizing: content-box;
           display: flex;
           justify-content: center;
@@ -165,9 +190,30 @@ body {
           color: $primaryColor;
           text-transform: uppercase;
           letter-spacing: 2px;
-          transition: 0.3s;
           box-shadow: 0 20px 30px -10px $primaryColorAlpha, 0 10px 30px -5px $primaryColorAlpha;
           cursor: pointer;
+          position: relative;
+          &::after{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            color: white;
+            content: attr(data-content);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: #000;
+          }
+          &:hover, &--active {
+            opacity: 1;
+            &::after{
+              opacity: 1;
+            }
+          }
           &:focus{
             outline: none;
           }
@@ -176,7 +222,7 @@ body {
     }
   }
   .app-content {
-    //flex-grow: 1;
+    flex-grow: 1;
     display: flex;
     &__section-welcome {
       height: 100%;
@@ -211,10 +257,23 @@ body {
         }
       }
     }
+    &__section-aboutMe {
+      flex-grow: 1;
+      padding-top: 60px;
+      padding-left: 3%;
+      padding-right: 3%;
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      &__content{
+        padding-top: 2%;
+        font-size: 1.8em;
+        text-indent: 1em;
+      }
+    }
   }
   .admin-panel{
     display: flex;
-    //flex-shrink: 0;
     margin-top: 100px;
     flex-grow: 1;
     form{
@@ -238,7 +297,6 @@ body {
   #root {
     .app-header {
       &__author-info{
-        //margin-left: 1%;
       }
       &__nav {
         .fa-bars {
@@ -261,32 +319,11 @@ body {
             justify-content: space-around;
             &__item {
               &__btn {
-                position: relative;
                 font-size: 1.3em;
                 letter-spacing: 1px;
-                overflow: hidden;
-                opacity: 1;
-                &::after{
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px;
-                  color: white;
-                  content: attr(data-content);
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
+                transition: 0.3s;
+                &::after {
                   transition: 0.3s;
-                  opacity: 0;
-                  background-color: #000;
-                }
-                &:hover, &--active {
-                  opacity: 1;
-                  &::after{
-                    opacity: 1;
-                  }
                 }
               }
             }
@@ -299,6 +336,7 @@ body {
         &__item {
           &__btn {
             position: relative;
+            transition: 0.3s;
             &::after{
               display: flex;
               justify-content: center;
@@ -326,7 +364,6 @@ body {
       }
     }
   }
-
 }
 
 @media (min-width: 1024px){
@@ -335,7 +372,6 @@ body {
   }
   #root {
     .app-header {
-      //height: 70px;
       &__author-info{
         margin-left: 2%;
       }
@@ -350,17 +386,8 @@ body {
             flex-direction: row;
             align-items: stretch;
             &__item {
-              //flex-basis: 17%;
-              //margin-left: 3%; no-margin in mobile-first
-              //align-items: stretch;
-
               &__btn {
-                //flex-shrink: 1;
-                //width: 153px;
-                //cursor: pointer;
                 &:hover {
-                  //color: #FFF;
-                  //background-color: $primaryColor;
                 }
               }
             }
@@ -377,7 +404,6 @@ body {
   }
   #root {
     .app-header {
-      //height: 80px;
       &__author-info{
         margin-left: 2%;
       }
@@ -387,20 +413,13 @@ body {
           height: 100%;
 
           &__list {
-            //height: 70%;
             flex-direction: row;
             align-items: stretch;
             &__item {
               flex-basis: 17%;
-              //margin-left: 3%; no-margin in mobile-first
               align-items: stretch;
-
               &__btn {
-                //width: 170px;
-                //cursor: pointer;
                 &:hover {
-                  //color: #FFF;
-                  //background-color: $primaryColor;
                 }
               }
             }
@@ -443,15 +462,19 @@ body {
       }
     }
     .app-nav{
+      justify-content: flex-start;
+      align-items: flex-start;
       &__list{
+        display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: stretch;
-        //flex-grow: 1;
+        flex-wrap: nowrap;
+        flex-grow: 0;
         &__item{
-          //flex-grow: 1;
+          flex-basis: auto;
+          flex-grow: 0;
+          align-items: flex-start;
           &__btn{
-            flex-grow: 1;
             &:focus{
             }
           }
@@ -461,15 +484,12 @@ body {
     .app-content {
       &__section-welcome {
         padding-top: 30vh;
-        //display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         &__title{
           flex-basis: 60%;
-          //font-size: 1.4em;
           margin-top: 6%;
-          //flex-grow: 6;
         }
 
         &__photo {
@@ -477,7 +497,6 @@ body {
           height: 100%;
           flex-direction: column;
           justify-content: flex-end;
-          //flex-grow: 4;
           img {
             width: 33vw;
           }

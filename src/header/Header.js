@@ -2,7 +2,6 @@ import React from 'react';
 import HeaderNavigation from './HeaderNavigation';
 
 const Header = props => {
-
     return (
       <header className={'app-header'}>
           <div
@@ -12,6 +11,7 @@ const Header = props => {
           <HeaderNavigation
               activeSection={props.activeSection}
               handleChangeSection={props.handleChangeSection}
+              content={props.content}
               language={props.language}
           />
       </header>

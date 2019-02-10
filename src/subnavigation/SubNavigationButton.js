@@ -7,7 +7,6 @@ const SubNavigationButton = props => {
     };
 
     return (
-        <li className={'app-nav__list__item'}>
             <button
                 className={`app-nav__list__item__btn ${chooseClassName()}`}
                 onClick={props.function}
@@ -15,7 +14,6 @@ const SubNavigationButton = props => {
                 data-content={props.textContent}
                 >{props.textContent}
             </button>
-        </li>
     );
 };
 

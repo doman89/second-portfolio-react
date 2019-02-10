@@ -62,31 +62,31 @@ class HeaderNavigation extends React.Component {
                         toggleMenuHamburger={this.toggleMenuHamburger}
                         activeSection={this.props.activeSection}
                         elementDataSet={'welcome'}
-                        language={this.props.language}
+                        content={this.props.content ? this.props.content.welcome : 'data is loading'}
                     />
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
                         activeSection={this.props.activeSection}
                         elementDataSet={'aboutMe'}
-                        language={this.props.language}
+                        content={this.props.content ? this.props.content.aboutMe : 'data is loading'}
                     />
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
                         activeSection={this.props.activeSection}
                         elementDataSet={'mySkills'}
-                        language={this.props.language}
+                        content={this.props.content ? this.props.content.mySkills : 'data is loading'}
                     />
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
                         activeSection={this.props.activeSection}
                         elementDataSet={'myPortfolio'}
-                        language={this.props.language}
+                        content={this.props.content ? this.props.content.myPortfolio : 'data is loading'}
                     />
                     <HeaderNavigationLiElement
                         toggleMenuHamburger={this.toggleMenuHamburger}
                         activeSection={this.props.activeSection}
                         elementDataSet={'contact'}
-                        language={this.props.language}
+                        content={this.props.content ? this.props.content.contact : 'data is loading'}
                     />
                 </ul>
             </div>
