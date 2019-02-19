@@ -7,6 +7,12 @@ const AboutMe = props => {
         switch (props.activeSubSection) {
             case 'coding':
                 return <AboutMeDescription content={props.content ? props.content.coding : null}/>;
+            case 'electronics':
+                return <AboutMeDescription content={props.content ? props.content.electronics : null}/>;
+            case 'education':
+                return <AboutMeDescription content={props.content ? props.content.education : null}/>;
+            case 'experience':
+                return <AboutMeDescription content={props.content ? props.content.experience : null}/>;
             default:
                 return <PageNotFound/>
         }
